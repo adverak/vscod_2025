@@ -10,7 +10,14 @@
 
   <!-- Top Navigation Bar -->
   <header>
-    <button>☰</button>
+    <button id="menu-btn" aria-expanded="false">☰</button>
+    <div class="dropdown" id="dropdown">
+      <ul>
+        <li><a href="wdd130/ice/apostle_spotlight/apostle_spotlight/apostles.html">apostle spotlight</a></li>
+        <li><a href="wdd130/ice/halloween/halloween/index.html">halloween</a></li>
+        <li><a href="wdd130/ice/signup/signup/signup.html">signup</a></li>
+      </ul>
+    </div>
     <span>Page title</span>
     <button></button>
     <button>⋮</button>
@@ -39,9 +46,9 @@
 
   <!-- Navigation Links -->
   <ul>
-    <li><a href="#home">Home</a></li>
-    <li><a href="#about">About</a></li>
-    <li><a href="#contact">Contact</a></li>
+    <li><a href="wdd130/ice/apostle_spotlight/apostle_spotlight/apostles.html">Home</a></li>
+    <li><a href="wdd130/ice/halloween/halloween/index.html">About</a></li>
+    <li><a href="wdd130/ice/signup/signup/signup.html">Contact</a></li>
   </ul>
 
   <h2>Additional Information</h2>
@@ -90,3 +97,24 @@
 
 </body>
 </html>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const menuBtn = document.getElementById('menu-btn');
+  const dropdown = document.getElementById('dropdown');
+
+  menuBtn.addEventListener('click', function() {
+    const isExpanded = menuBtn.getAttribute('aria-expanded') === 'true';
+    menuBtn.setAttribute('aria-expanded', !isExpanded);
+    dropdown.classList.toggle('show');
+  });
+
+  // Close dropdown when clicking outside
+  document.addEventListener('click', function(event) {
+    if (!menuBtn.contains(event.target) && !dropdown.contains(event.target)) {
+      menuBtn.setAttribute('aria-expanded', 'false');
+      dropdown.classList.remove('show');
+    }
+  });
+});
+</script>
