@@ -1,61 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Home Page</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- Top Navigation Bar -->
+  
   <header>
-    <button id="menu-btn" aria-expanded="false">☰</button>
-    <div class="dropdown" id="dropdown">
-      <ul>
-        <li><a href="ice.html">apostle spotlight</a></li>
-        <li><a href="index.html">halloween</a></li>
-      </ul>
+    <div class="nav-left">
+      <a href="#" class="brand">Portfolio</a>
     </div>
-    <span>Page title</span>
-    <button></button>
-    <button>⋮</button>
+
+    <nav class="nav-center" aria-label="Primary">
+      <ul class="nav-list"></ul>
+        <li><a href="ice.html">Apostle Spotlight</a></li>
+        <li><a href="index.html">Halloween Project</a></li>
+        <li><a href="wdd130/ice/apostle_spotlight/apostle_spotlight/apostles.html">Home</a></li>
+        <li><a href="wdd130/ice/halloween/halloween/index.html">About</a></li>
+        <li><a href="wdd130/ice/signup/signup/signup.html">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="nav-right">
+      <button id="menu-btn" aria-expanded="false" aria-controls="dropdown" class="menu-btn">☰</button>
+      <div class="dropdown" id="dropdown" role="menu" aria-hidden="true">
+        <ul>
+          <li><a href="ice.html">Apostle Spotlight</a></li>
+          <li><a href="index.html">Halloween Project</a></li>
+          <li><a href="wdd130/ice/signup/signup/signup.html">Sign Up</a></li>
+        </ul>
+      </div>
+    </div>
   </header>
 
-  <!-- Main Title -->
-  <h1>home page</h1>
+  
+  <h1 class="page-title">Jesse Balazs's Portfolio</h1>
 
-  <!-- Hero Image -->
-  <section>
-    <img src="https://picsum.photos/300/150" alt="Main banner image" width="300" height="150">
+  
+  <section class="hero"></section>
+    <img src="https://picsum.photos/900/250" alt="Main banner image" width="900" height="250">
   </section>
 
-  <!-- Three Column Text Section -->
-  <section>
+  
+  <section class="features">
     <article>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer id magna sed nulla tempus tincidunt.</p>
+      <h2>Course Overview</h2>
+      <p>This site showcases projects, notes, and resources for WDD130 (Intro to Web Development). Expect HTML fundamentals, CSS layouts, and small JavaScript examples .</p>
     </article>
+
     <article>
-      <p>Phasellus efficitur, nisl ut sodales vestibulum, magna nunc convallis justo, ac tincidunt magna purus ut mi.</p>
+      <h2>Upcoming Projects</h2>
+      <p>Upcoming assignments include a responsive landing page, a simple interactive form, and a small DOM-manipulation project.</p>
     </article>
+
     <article>
-      <p>Curabitur fermentum turpis ut felis blandit, ac porta lacus convallis. Vivamus at metus non libero porttitor luctus.</p>
+      <h2>Resources & Tools</h2>
+      <p>VS Code, live server extensions, and browser devtools. Helpful resources: MDN Web Docs, freeCodeCamp, and the course reading materials on the instructor site.</p>
     </article>
   </section>
 
-  <!-- Navigation Links -->
-  <ul>
-    <li><a href="wdd130/ice/apostle_spotlight/apostle_spotlight/apostles.html">Home</a></li>
-    <li><a href="wdd130/ice/halloween/halloween/index.html">About</a></li>
-    <li><a href="wdd130/ice/signup/signup/signup.html">Contact</a></li>
-  </ul>
+ 
+  <nav class="quick-links" aria-label="Quick links">
+    <ul>
+      <li><a href="wdd130/ice/apostle_spotlight/apostle_spotlight/apostles.html">Apostles Project</a></li>
+      <li><a href="wdd130/ice/halloween/halloween/index.html">Halloween Project</a></li>
+      <li><a href="wdd130/ice/signup/signup/signup.html">Signup / Contact</a></li>
+    </ul>
+  </nav>
 
   <h2>Additional Information</h2>
-  <h3></h3>
 
   <table>
     <tr>
-      <th>Game Title</th>
+      <th>Games I want to play</th>
       <th>Genre</th>
       <th>Platform</th>
     </tr>
@@ -75,45 +95,36 @@
       <td>PC, Console, Mobile</td>
     </tr>
   </table>
-  <form>
-    <input type="text" placeholder="Placeholder"><br><br>
-    <input type="date" value="2025-10-18"><br><br>
-    <textarea placeholder="Type here"></textarea><br><br>
-    <input type="checkbox" id="check1">
-    <label for="check1">Checkbox</label><br>
-    <input type="checkbox" id="check2">
-    <label for="check2">Checkbox</label><br><br>
-    <button type="button">Button</button>
-  </form>
 
-  <!-- Footer Section -->
+
+  <section class="contact-section">
+    <h2 class="form-title">Contact / Sign-up — Get Course Updates</h2>
+
+    <form class="contact-form" aria-label="Contact form">
+      <input type="text" placeholder="Full name" name="name" required><br>
+      <input type="email" placeholder="Email address" name="email" required><br>
+      <input type="date" value="2025-10-18" name="start-date"><br>
+      <textarea placeholder="Tell us about your goals or questions" rows="4" name="message"></textarea><br>
+      <div class="checkboxes">
+        <input type="checkbox" id="updates" name="updates">
+        <label for="updates">Subscribe to updates</label><br>
+        <input type="checkbox" id="agree" name="agree" required>
+        <label for="agree">I agree to be contacted about course news</label>
+      </div>
+      <button type="submit" class="primary-btn">Submit</button>
+    </form>
+  </section>
+
+
   <footer>
-    <p>Lorem ipsum dolor sit amet</p>
-    <img src="https://picsum.photos/50/50" alt="Thumbnail 1" width="50" height="50">
-    <img src="https://picsum.photos/50/50" alt="Thumbnail 2" width="50" height="50">
-    <img src="https://picsum.photos/50/50" alt="Thumbnail 3" width="50" height="50">
+    <p>WDD130 student showcase — built with HTML & CSS</p>
+    <div class="thumbs">
+      <img src="https://picsum.photos/50/50" alt="Thumbnail 1" width="50" height="50">
+      <img src="https://picsum.photos/50/50" alt="Thumbnail 2" width="50" height="50">
+      <img src="https://picsum.photos/50/50" alt="Thumbnail 3" width="50" height="50">
+    </div>
   </footer>
 
+  
 </body>
 </html>
-
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-  const menuBtn = document.getElementById('menu-btn');
-  const dropdown = document.getElementById('dropdown');
-
-  menuBtn.addEventListener('click', function() {
-    const isExpanded = menuBtn.getAttribute('aria-expanded') === 'true';
-    menuBtn.setAttribute('aria-expanded', !isExpanded);
-    dropdown.classList.toggle('show');
-  });
-
-  // Close dropdown when clicking outside
-  document.addEventListener('click', function(event) {
-    if (!menuBtn.contains(event.target) && !dropdown.contains(event.target)) {
-      menuBtn.setAttribute('aria-expanded', 'false');
-      dropdown.classList.remove('show');
-    }
-  });
-});
-</script>
