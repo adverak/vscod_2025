@@ -1,81 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Home Page</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" content="Jesse Balazs's portfolio showcasing WDD130 web development projects and coursework.">
+    <title>Jesse Balazs - Web Development Portfolio</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <header>
-    <div class="nav-left">
-      <a href="index.html" class="brand">Portfolio</a>
-    </div>
+    <header>
+        <div class="nav-left">
+            <a href="index.html" class="brand">Jesse Balazs</a>
+        </div>
 
-    <nav class="nav-center" aria-label="Primary">
-      <ul class="nav-list">
-        <li><a href="ice/apostle_spotlight/apostle_spotlight/apostles.html">Apostle Spotlight</a></li>
-        <li><a href="ice/halloween/halloween/index.html">Halloween Project</a></li>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="ice/signup/signup/signup.html">Contact</a></li>
-      </ul>
-    </nav>
+        <nav class="nav-center" aria-label="Primary navigation">
+            <ul class="nav-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="ice/apostle_spotlight/apostle_spotlight/apostles.html">Apostle Spotlight</a></li>
+                <li><a href="ice/halloween/halloween/index.html">Halloween Project</a></li>
+                <li><a href="ice/signup/signup/signup.html">Contact</a></li>
+                <li><a href="#about">About</a></li>
+            </ul>
+        </nav>
 
-    <div class="nav-right">
-      <button id="menu-btn" aria-expanded="false" aria-controls="dropdown" class="menu-btn">☰</button>
-      <div class="dropdown" id="dropdown" role="menu" aria-hidden="true">
-        <ul>
-          <li><a href="ice/apostle_spotlight/apostle_spotlight/apostles.html">Apostle Spotlight</a></li>
-          <li><a href="ice/halloween/halloween/index.html">Halloween Project</a></li>
-          <li><a href="ice/signup/signup/signup.html">Sign Up</a></li>
-        </ul>
-      </div>
-    </div>
-  </header>
+        <button id="menu-btn" aria-expanded="false" aria-controls="dropdown" class="menu-btn">☰</button>
+        <div class="dropdown" id="dropdown" role="menu" aria-hidden="true">
+            <ul>
+                <li><a href="ice/apostle_spotlight/apostle_spotlight/apostles.html">Apostle Spotlight</a></li>
+                <li><a href="ice/halloween/halloween/index.html">Halloween Project</a></li>
+                <li><a href="ice/signup/signup/signup.html">Sign Up</a></li>
+            </ul>
+        </div>
+    </header>
 
-  <h1 class="page-title">Jesse Balazs's Portfolio</h1>
+    <main>
+        <h1>Jesse Balazs's Portfolio</h1>
 
-  <section class="hero">
-    <img src="https://picsum.photos/900/250" alt="Main banner image" width="900" height="250">
-  </section>
-<article>
-      <h2>Client/Developer Team Project</h2>
-      
-</article>
-  
-  <section class="features">
-    <article>
-      <h2>Course Overview</h2>
-      <p>This site showcases projects, notes, and resources for WDD130 (Intro to Web Development).</p>
-    </article>
+        <section class="hero">
+            <img src="https://picsum.photos/900/250" alt="Portfolio banner" width="900" height="250">
+        </section>
 
-    <article>
-      <h2>Upcoming Projects</h2>
-      <p>Upcoming assignments include responsive layouts, forms, and DOM manipulation.</p>
-    </article>
+        <section class="features">
+            <article>
+                <h2>Course Overview</h2>
+                <p>This site showcases projects, notes, and resources for WDD130 (Intro to Web Development).</p>
+            </article>
 
-    <article>
-      <h2>Resources & Tools</h2>
-      <p>VS Code, browser devtools, MDN Web Docs, and course materials.</p>
-    </article>
-  </section>
+            <article>
+                <h2>Upcoming Projects</h2>
+                <p>Upcoming assignments include responsive layouts, forms, and DOM manipulation.</p>
+            </article>
 
-  <nav class="quick-links" aria-label="Quick links">
-    <ul>
-      <li><a href="ice/apostle_spotlight/apostle_spotlight/apostles.html">ICE: Apostle Spotlight</a></li>
-      <li><a href="ice/halloween/halloween/index.html">ICE: Halloween</a></li>
-      <li><a href="ice/signup/signup/signup.html">ICE: Signup Form</a></li>
-      <li><a href="#">ICE: Layout Practice (not completed)</a></li>
-      <li><a href="#">ICE: Flexbox Practice (not completed)</a></li>
-    </ul>
-  </nav>
+            <article>
+                <h2>Resources & Tools</h2>
+                <p>VS Code, browser devtools, MDN Web Docs, and course materials.</p>
+            </article>
+        </section>
 
-  <footer>
-    <p>WDD130 student showcase — built with HTML & CSS</p>
-  </footer>
+        <nav class="quick-links" aria-label="Project links">
+            <h2>Projects & Assignments</h2>
+            <ul>
+                <li><a href="ice/apostle_spotlight/apostle_spotlight/apostles.html">ICE: Apostle Spotlight</a></li>
+                <li><a href="ice/halloween/halloween/index.html">ICE: Halloween</a></li>
+                <li><a href="ice/signup/signup/signup.html">ICE: Signup Form</a></li>
+                <li><a href="#">ICE: Layout Practice <span class="status">(in progress)</span></a></li>
+                <li><a href="#">ICE: Flexbox Practice <span class="status">(in progress)</span></a></li>
+            </ul>
+        </nav>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 WDD130 student showcase — built with HTML & CSS</p>
+    </footer>
 
 </body>
 </html>
-
